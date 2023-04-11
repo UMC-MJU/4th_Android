@@ -9,7 +9,26 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fed2859d-493f-442b-954a-3f35b2791b8c" name="Changes" comment="" />
+    <list default="true" id="fed2859d-493f-442b-954a-3f35b2791b8c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/java/com/example/layout/LoginActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/btn_signin_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/btn_signin_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/btn_signin_twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_account.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_add_a_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_arrow_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_chat_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_favorite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_favorite_border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_outline_local_play_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/ic_search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/lens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/logo_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/drawable/push_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEEK2/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +41,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
