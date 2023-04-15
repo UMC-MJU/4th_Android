@@ -1,10 +1,4 @@
-# 
 
-## 1. 자신의 브랜치에 프로젝트 업로드하기
-
-## 2. Main 브랜치로 PR(Pull Request) 날리기
-
-## 3. 스터디원 코드 리뷰해주기
 
 
 # 💚 UMC MJU 4th_Android
@@ -40,3 +34,12 @@ TEST: 테스트 코드 추가 및 수정
 
 
 Copyright © Sojung Park (Bei) All rights reserved.
+
+
+
+
+## 1. 자신의 브랜치에 프로젝트 업로드하기
+
+## 2. Main 브랜치로 PR(Pull Request) 날리기
+
+## 3. 스터디원 코드 리뷰해주기
