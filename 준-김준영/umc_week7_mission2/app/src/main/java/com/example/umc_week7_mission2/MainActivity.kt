@@ -15,14 +15,14 @@ import com.example.umc_week7_mission2.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
-    val START = 48
     private var time = 0
-    private var duration = 0
-    //private var elapsedTime = 0
+    private var elapsedTime = 0
     private var isPlaying = true
     private var job: Job? = null
 
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 if(fromUser){
                     mdPlayer.seekTo(progress)
                     if(progress == mdPlayer.duration) pauseMusic()
-                }else playMusic()
+                }
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {}
             override fun onStopTrackingTouch(p0: SeekBar?) {}
@@ -80,32 +80,41 @@ class MainActivity : AppCompatActivity() {
 
     private fun playMusic() {
         mdPlayer.start()
-        job = lifecycleScope.launch(Dispatchers.Main) {
-            while (true) {
-                val currentPosition = mdPlayer.currentPosition
-                playTime.text = formatTime(currentPosition)
-                sbBar.progress = currentPosition
+        var currentPosition = mdPlayer.currentPosition
+        job = lifecycleScope.launch(Dispatchers.IO) {
+            while (isActive) {
+                if(!mdPlayer.isPlaying){
+                    break;
+                }
+                withContext(Dispatchers.Main){
+                    playTime.text = formatTime(currentPosition)
+                    elapsedTime = mdPlayer.duration - currentPosition
+                    totalTime.text = formatTime(elapsedTime)
+                    sbBar.progress = currentPosition
+                }
                 delay(1000)
+                currentPosition = mdPlayer.currentPosition
             }
         }
+        job?.invokeOnCompletion { job = null }
     }
 
     fun pauseMusic(){
         mdPlayer.stop()
         mdPlayer.reset()
-        isPlaying = false
+        isPlaying = true
         play.setImageResource(R.drawable.btn_play)
         time = 0
-        //elapsedTime = 0
-        job?.cancel()
+        totalTime.text = formatTime(mdPlayer.duration)
         playTime.text = "00:00"
-        sbBar.progress = mdPlayer.currentPosition
+        sbBar.progress = 0
         mdPlayer = MediaPlayer.create(this, R.raw.music)
     }
 
     fun formatTime(progress: Int): String {
-        val minutes = progress / 1000 / 60
-        val seconds = progress / 1000 % 60
+        val totoalSecond = progress / 1000
+        val minutes = totoalSecond / 60
+        val seconds = totoalSecond % 60
         return String.format("%02d:%02d", minutes, seconds)
     }
 
