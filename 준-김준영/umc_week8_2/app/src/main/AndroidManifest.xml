@@ -21,7 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Fav_Activity" />
+
+        <activity
+            android:name=".Fav_Activity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>
