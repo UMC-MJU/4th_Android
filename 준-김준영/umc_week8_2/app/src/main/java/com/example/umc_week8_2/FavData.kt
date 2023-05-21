@@ -31,7 +31,8 @@ class FavData {
     }
 
 
-    constructor(content: String, datetime: Long, star: Int, isFav: Int) { // 생성자를 만들어 놓으면 코드가 좀 더 짧아진다 (ex val memo memo.content="" memo.datetime="" --> val memo = RoomMemo("", "")
+    constructor(no:Long, content: String, datetime: Long, star: Int, isFav: Int) { // 생성자를 만들어 놓으면 코드가 좀 더 짧아진다 (ex val memo memo.content="" memo.datetime="" --> val memo = RoomMemo("", "")
+        this.no = no
         this.content = content
         this.datetime = datetime
         this.star = star

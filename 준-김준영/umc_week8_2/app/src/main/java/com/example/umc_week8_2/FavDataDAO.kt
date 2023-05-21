@@ -20,4 +20,7 @@ interface FavDataDAO {
 
     @Delete
     suspend fun delete(favMemo: FavData)
+
+    @Query("DELETE FROM fav_memo")
+    suspend fun deleteAll()
 }

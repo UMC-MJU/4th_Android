@@ -9,6 +9,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.umc_week8_2.databinding.ItemRecyclerBinding
@@ -38,14 +39,15 @@ class RecyclerAdapter(val roomMemoList:MutableList<RoomMemo>, private val memoDa
                 val memo = RoomMemo(roomMemo.content, roomMemo.datetime, 1, roomMemo.isFav)
                 updateStar(memo, position)
                 notifyItemChanged(position)
-
-                val toast = Toast.makeText(holder.itemView.context, "즐겨찾기에 추가되었습니다.",Toast.LENGTH_SHORT).show()
+                EventBus.getDefault().post(getUpdateStar(roomMemo.no!!, roomMemo.content, roomMemo.datetime, roomMemo.star!!, roomMemo.isFav))
+                Toast.makeText(holder.itemView.context, "즐겨찾기에 추가되었습니다.",Toast.LENGTH_SHORT).show()
             }else{
                 roomMemo.star = 0
                 val memo = RoomMemo(roomMemo.content, roomMemo.datetime, 0, roomMemo.isFav)
                 updateStar(memo, position)
                 notifyItemChanged(position)
-                val toast = Toast.makeText(holder.itemView.context, "즐겨찾기에 삭제되었습니다.",Toast.LENGTH_SHORT).show()
+                EventBus.getDefault().post(getUpdateStar(roomMemo.no!!, roomMemo.content, roomMemo.datetime, roomMemo.star!!, roomMemo.isFav))
+                Toast.makeText(holder.itemView.context, "즐겨찾기에 삭제되었습니다.",Toast.LENGTH_SHORT).show()
             }
         }
 

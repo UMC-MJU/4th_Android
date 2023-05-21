@@ -22,4 +22,7 @@ interface RoomMemoDAO {
 
     @Delete
     suspend fun delete(memo:RoomMemo)
+
+    @Query("DELETE FROM room_memo")
+    suspend fun deleteAll()
 }
