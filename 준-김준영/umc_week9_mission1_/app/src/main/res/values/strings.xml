@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">umc_week9_mission1_</string>
+    <string name="api_key">718262adfd6434b05be184cc57bd7a7a</string>
+    <string name="dust_api_key">ByaALIob3OIXQr8NjiTu8ykQ2Qrs5fl%2Fb5BDKpu71S0LK8KJ3lc1e%2Bg85OKz%2F1viaEyhR3F7YK538oohApOO%2BQ%3D%3D</string>
+    <string name="covid_api_key">ByaALIob3OIXQr8NjiTu8ykQ2Qrs5fl%2Fb5BDKpu71S0LK8KJ3lc1e%2Bg85OKz%2F1viaEyhR3F7YK538oohApOO%2BQ%3D%3D</string>
+</resources>
